@@ -2,73 +2,74 @@
  * @type {import('@types/eslint').Linter.BaseConfig}
  */
 module.exports = {
-    env: { browser: true, jest: true },
-    extends: [
-        'airbnb',
-        // 'airbnb-typescript', // breaking ... why???
-        'eslint:recommended',
-        'plugin:react/jsx-runtime',
-        'plugin:react/recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:react-hooks/recommended',
-        'plugin:prettier/recommended',
-        'prettier',
-    ],
-    parser: '@typescript-eslint/parser',
-    parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-    plugins: ['react', 'react-refresh', '@typescript-eslint'],
-    ignorePatterns: [
-        'vite.config.js',
-        '.eslintrc.js',
-        'src/hooks/useIntercom.ts',
-        'src/graphql/simulations/generated.tsx',
-        'src/graphql/core/generated.tsx',
-        '**.cy.ts',
-        'cypress/global.d.ts',
-        'cypress/support/commands.ts',
-        'cypress/support/e2e.ts',
-        './cypress.config.ts',
-    ],
-    settings: {
-        'import/parsers': {
-            '@typescript-eslint/parser': ['.ts', '.tsx'],
-        },
-        'import/resolver': {
-            typescript: {
-                alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
-            },
-        },
+  env: { browser: true, jest: true },
+  extends: [
+    "airbnb",
+    // 'airbnb-typescript', // breaking ... why???
+    "eslint:recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+  plugins: ["react", "react-refresh", "@typescript-eslint"],
+  ignorePatterns: [
+    "vite.config.js",
+    ".eslintrc.js",
+    ".eslintrc.cjs",
+    "src/hooks/useIntercom.ts",
+    "src/graphql/simulations/generated.tsx",
+    "src/graphql/core/generated.tsx",
+    "**.cy.ts",
+    "cypress/global.d.ts",
+    "cypress/support/commands.ts",
+    "cypress/support/e2e.ts",
+    "./cypress.config.ts",
+  ],
+  settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
     },
-    rules: {
-        'react/require-default-props': 'off', // doesn't work with typescript
-        'import/no-extraneous-dependencies': 'off', // doesn't seem like correct output...
-        'react-refresh/only-export-components': 'warn',
-        // 'react/jsx-uses-vars': 'error', // todo: say why
-        // 'react/jsx-uses-react': 'error', // todo: say why
-        'import/extensions': [
-            'error',
-            'ignorePackages',
-            {
-                js: 'never',
-                jsx: 'never',
-                ts: 'never',
-                tsx: 'never',
-            },
-        ],
-        '@typescript-eslint/no-unused-vars': [
-            'error',
-            {
-                varsIgnorePattern: 'React',
-            },
-        ], // because we want to let React be imported even if it's not directly used
-        'no-unused-vars': [
-            'error',
-            {
-                varsIgnorePattern: 'React',
-            },
-        ], // because we want to let React be imported even if it's not directly used
-        'react/jsx-filename-extension': 'off', // not sure...
+    "import/resolver": {
+      typescript: {
+        alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+      },
     },
+  },
+  rules: {
+    "react/require-default-props": "off", // doesn't work with typescript
+    "import/no-extraneous-dependencies": "off", // doesn't seem like correct output...
+    "react-refresh/only-export-components": "warn",
+    // 'react/jsx-uses-vars': 'error', // todo: say why
+    // 'react/jsx-uses-react': 'error', // todo: say why
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        varsIgnorePattern: "React",
+      },
+    ], // because we want to let React be imported even if it's not directly used
+    "no-unused-vars": [
+      "error",
+      {
+        varsIgnorePattern: "React",
+      },
+    ], // because we want to let React be imported even if it's not directly used
+    "react/jsx-filename-extension": "off", // not sure...
+  },
 };
 
 // OLD NOT WORKING
