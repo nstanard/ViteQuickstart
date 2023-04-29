@@ -9,8 +9,8 @@ A simple Vite quick start project that has all the core tools to be successful.
 - Cypress & Jest w/ coverage reporting
 - Table and Query tanstack packages
 - React router v6
-- normalize
--
+- Normalize
+- Docker
 
 ## What's missing?
 
