@@ -25,7 +25,7 @@ export default defineConfig(({ command }) => ({
     port: 3000,
   },
   build: {
-    sourcemap: true,
+    sourcemap: command === "serve",
     rollupOptions: {
       // https://github.com/vitejs/vite/issues/2433
       maxParallelFileOps: 2,
