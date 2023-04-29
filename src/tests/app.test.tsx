@@ -11,6 +11,6 @@ import App from "../app";
 describe("App", () => {
   test("App renders", async () => {
     render(<App />);
-    expect(screen.getByRole("heading").innerHTML).toEqual("Hi!");
+    expect(screen.getByRole("heading").innerHTML).toEqual("Home");
   });
 });

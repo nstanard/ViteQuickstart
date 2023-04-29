@@ -25,6 +25,7 @@ export default async (): Promise<Config.InitialOptions> => ({
   coveragePathIgnorePatterns: [
     "./node_modules/",
     "./babel.config.js",
+    "src/constants.ts",
     "src/index.tsx",
     "src/main.tsx",
     "src/vite-env.d.ts",
