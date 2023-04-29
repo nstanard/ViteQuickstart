@@ -25,6 +25,7 @@ export default defineConfig(({ command }) => ({
     port: 3000,
   },
   build: {
+    minify: true,
     sourcemap: command === "serve",
     rollupOptions: {
       // https://github.com/vitejs/vite/issues/2433

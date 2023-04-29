@@ -9,8 +9,9 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/blog" element={<Blog />} />
+      <Route path="about-us" element={<AboutUs />} />
+      <Route path="blog" element={<Blog />} />
+
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

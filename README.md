@@ -15,3 +15,6 @@ A simple Vite quick start project that has all the core tools to be successful.
 ## What's missing?
 
 - Re-usable components/styling
+
+<!-- docker build --tag vite-quick-start . -->
+<!-- docker run -it -p 3000:3000 vite-quick-start -->
