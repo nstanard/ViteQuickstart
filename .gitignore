@@ -1,0 +1,5 @@
+node_modules
+.env.local
+.nyc_output/out.json
+coverage/
+cypress-coverage/
